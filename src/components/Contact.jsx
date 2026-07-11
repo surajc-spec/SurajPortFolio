@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, MapPin, Send, CheckCircle, Copy } from 'lucide-react';
 import { Github, Linkedin } from './Icons';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [toast, setToast] = useState(null);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('surajchougule378@gmail.com');
@@ -17,14 +19,56 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const subject = formData.subject.trim();
+    const message = formData.message.trim();
+
+    if (!name || !email || !subject || !message) {
+      setToast({ type: 'error', message: 'All fields are required.' });
+      setTimeout(() => setToast(null), 4000);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setToast({ type: 'error', message: 'Please enter a valid email address.' });
+      setTimeout(() => setToast(null), 4000);
+      return;
+    }
+
     setIsSubmitting(true);
-    // Simulate API request path
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1500);
+
+    const templateParams = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+    };
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      }
+    )
+      .then(() => {
+        setIsSubmitting(false);
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setToast({ type: 'success', message: "Message sent successfully! I'll get back to you soon." });
+        setTimeout(() => setToast(null), 4000);
+        setTimeout(() => setSubmitted(false), 5000);
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        setIsSubmitting(false);
+        setToast({ type: 'error', message: 'Failed to send message. Please try again.' });
+        setTimeout(() => setToast(null), 4000);
+      });
   };
 
   return (
@@ -225,6 +269,31 @@ export default function Contact() {
         </div>
 
       </div>
+      
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {toast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className={`fixed bottom-6 right-6 z-50 flex items-center space-x-3 px-6 py-4 rounded-2xl border backdrop-blur-xl shadow-2xl ${
+              toast.type === 'success'
+                ? 'bg-emerald-950/90 border-emerald-500/30 text-emerald-200'
+                : 'bg-rose-950/90 border-rose-500/30 text-rose-200'
+            }`}
+          >
+            {toast.type === 'success' ? (
+              <CheckCircle size={18} className="text-emerald-400 shrink-0" />
+            ) : (
+              <div className="w-5 h-5 rounded-full bg-rose-500/20 border border-rose-500/30 flex items-center justify-center shrink-0">
+                <span className="text-xs font-bold text-rose-400">!</span>
+              </div>
+            )}
+            <p className="text-sm font-medium tracking-wide">{toast.message}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

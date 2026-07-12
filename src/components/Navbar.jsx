@@ -84,13 +84,14 @@ export default function Navbar() {
             Hire Me
           </a> */}
           <a
-            href="/SurajResume.pdf"
-         
-            className="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white text-sm font-semibold shadow-[0_4px_20px_rgba(139,92,246,0.25)] hover:shadow-[0_4px_30px_rgba(139,92,246,0.4)] transition-all duration-300 hover:-translate-y-0.5"
-          >
-            <span>Download Resume</span>
-            <Download size={15} />
-          </a>
+  href="/SurajResume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.3)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
+>
+  <span>View Resume</span>
+  <Download size={18} />
+</a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -131,14 +132,15 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="pt-4 border-t border-white/10 flex flex-col space-y-4">
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="flex items-center justify-center space-x-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white font-semibold text-center"
-                >
-                  <span>Download Resume</span>
-                  <Download size={18} />
-                </a>
+            <a
+  href="/SurajResume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.3)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
+>
+  <span>View Resume</span>
+  <Download size={18} />
+</a>
               </div>
             </div>
           </motion.div>

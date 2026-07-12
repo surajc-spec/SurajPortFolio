@@ -71,10 +71,10 @@ export default function Hero() {
 
           {/* Buttons */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-2">
-            <a
-              href="#projects"
-              className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white font-semibold shadow-[0_4px_25px_rgba(139,92,246,0.3)] hover:shadow-[0_4px_35px_rgba(139,92,246,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
-            >
+          <a
+  href="#projects"
+  className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.3)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
+>
               <span>View Projects</span>
               <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
             </a>
@@ -214,8 +214,8 @@ export default function Hero() {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-1.5 opacity-60 hover:opacity-100 transition-opacity">
-        <span className="text-[10px] uppercase tracking-widest text-slate-500 font-medium">Scroll to explore</span>
-        <motion.div 
+        {/* <span className="text-[10px] uppercase tracking-widest text-slate-500 font-medium">Scroll to explore</span> */}
+        {/* <motion.div 
           className="w-5 h-8 rounded-full border-2 border-slate-700 flex items-start justify-center p-1"
           animate={{
             borderColor: ['rgba(51, 65, 85, 1)', 'rgba(139, 92, 246, 1)', 'rgba(51, 65, 85, 1)']
@@ -233,7 +233,7 @@ export default function Hero() {
               ease: 'easeInOut'
             }}
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

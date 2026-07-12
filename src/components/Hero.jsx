@@ -57,12 +57,16 @@ export default function Hero() {
           </motion.div>
 
           {/* Heading */}
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
-            Hi, I'm <span className="text-gradient-purple-blue">Suraj Chougule</span>
-            <span className="block text-2xl sm:text-3xl md:text-4xl mt-3 font-semibold text-slate-300">
-              Full Stack Developer
-            </span>
-          </motion.h1>
+         <motion.h1
+  variants={itemVariants}
+  className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-white"
+>
+  Hi, I'm <span className="text-[#4F6EF7]">Suraj Chougule</span>
+
+  <span className="block text-2xl sm:text-3xl md:text-4xl mt-3 font-semibold text-slate-300">
+    Full Stack Developer
+  </span>
+</motion.h1>
 
           {/* Subtitle */}
           <motion.p variants={itemVariants} className="text-lg text-slate-400 max-w-xl leading-relaxed">

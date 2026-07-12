@@ -1,131 +1,138 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Zap, Lightbulb, Users } from 'lucide-react';
+import { Code2, Rocket, Lightbulb } from 'lucide-react';
 
 const features = [
   {
     icon: Code2,
     title: 'Clean Code',
-    desc: 'Writing maintainable, clean, and scalable software with standard design patterns.',
-    color: 'group-hover:text-purple-400 group-hover:border-purple-500/30'
+    desc: 'I write maintainable, scalable, and efficient code.'
   },
   {
-    icon: Zap,
+    icon: Rocket,
     title: 'Performance Focused',
-    desc: 'Building optimized and efficient systems focusing on load speed and bundle size.',
-    color: 'group-hover:text-blue-400 group-hover:border-blue-500/30'
+    desc: 'I build fast, optimized, and high-performance applications.'
   },
   {
     icon: Lightbulb,
     title: 'Problem Solver',
-    desc: 'Finding practical, optimized solutions to real-world software and architectural challenges.',
-    color: 'group-hover:text-amber-400 group-hover:border-amber-500/30'
-  },
-  {
-    icon: Users,
-    title: 'Team Collaboration',
-    desc: 'Working effectively in cross-functional teams with agile values and clear communication.',
-    color: 'group-hover:text-cyan-400 group-hover:border-cyan-500/30'
+    desc: 'I enjoy solving real-world problems with smart and simple solutions.'
   }
 ];
 
 export default function About() {
-  const cardVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: (idx) => ({
-      y: 0,
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
       opacity: 1,
+      y: 0,
       transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 15,
-        delay: idx * 0.1
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1],
+        staggerChildren: 0.15
       }
-    })
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+    }
   };
 
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-slate-950/20">
-      {/* Subtle background glow */}
-      <div className="glow-orb glow-orb-purple w-[400px] h-[400px] top-[20%] right-[-10%]" />
-      
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        {/* Header Block */}
-        <div className="max-w-3xl mb-16 text-left">
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6 }}
-            className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-3"
-          >
-            About Me
-          </motion.p>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6"
-          >
-            Turning ideas into <span className="text-gradient-purple-blue">real-world products</span>.
-          </motion.h2>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-slate-400 leading-relaxed"
-          >
-            I am a passionate software developer who enjoys building impactful applications, solving real-world problems, and continuously learning modern technologies. My goal is to create products that provide meaningful value and excellent user experiences.
-          </motion.p>
-        </div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          className="bg-slate-900/40 border border-white/5 rounded-3xl p-8 md:p-12 lg:p-16 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            {/* LEFT COLUMN: Profile Photo */}
+            <motion.div 
+              variants={itemVariants} 
+              className="lg:col-span-4 flex justify-center items-center"
+            >
+              <div className="relative group w-full max-w-[280px] lg:w-[300px] lg:h-[420px] aspect-[3/4] lg:aspect-auto rounded-2xl overflow-hidden border border-[#4F6EF7]/20 shadow-[0_0_20px_rgba(79,110,247,0.1)] transition-all duration-300 hover:border-[#5B7CFA]/30 hover:shadow-[0_0_30px_rgba(79,110,247,0.2)]">
+                <img 
+                  src="/ProfilePhoto.jpeg" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover object-center rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </motion.div>
 
-        {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, idx) => {
-            const Icon = feature.icon;
-            return (
-              <motion.div
-                key={feature.title}
-                custom={idx}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-50px' }}
-                className="group relative p-6 rounded-2xl glass-card glass-card-hover text-left flex flex-col justify-between min-h-[220px]"
-              >
-                {/* Glow border overlay effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            {/* CENTER COLUMN: Content */}
+            <motion.div 
+              variants={itemVariants}
+              className="lg:col-span-5 flex flex-col justify-center text-left space-y-6"
+            >
+              <div className="space-y-4">
+                <span className="text-sm font-bold tracking-widest text-[#4F6EF7] uppercase block">
+                  ABOUT ME
+                </span>
                 
-                <div>
-                  {/* Icon Frame */}
-                  <div className="w-12 h-12 rounded-xl bg-slate-900/80 border border-white/5 flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110 group-hover:bg-slate-900 shadow-inner">
-                    <Icon className="w-6 h-6 text-slate-400 transition-all duration-300 group-hover:text-white" />
-                  </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 tracking-wide">
-                    {feature.title}
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-sm text-slate-400 leading-relaxed">
-                    {feature.desc}
-                  </p>
-                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+                  Turning ideas into <span className="text-[#4F6EF7]">real-world products.</span>
+                </h2>
                 
-                {/* Bottom line accent */}
-                <div className="w-8 h-1 rounded bg-slate-800 mt-6 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-violet-500 group-hover:to-blue-500 transition-all duration-500" />
-              </motion.div>
-            );
-          })}
-        </div>
+                <p className="text-base text-slate-400 leading-relaxed font-normal">
+                  I'm a Full Stack Developer passionate about building modern web applications and turning ideas into real-world products. I enjoy solving complex problems, learning new technologies, and creating scalable, performance-focused solutions with clean user experiences.
+                </p>
+              </div>
 
+              <div className="pt-2">
+                <a 
+                  href="#contact" 
+                  className="inline-flex items-center space-x-2 text-[#4F6EF7] hover:text-[#5B7CFA] font-semibold group transition-colors duration-300"
+                >
+                  <span>Know more about me</span>
+                  <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* RIGHT COLUMN: Divider & Features */}
+            <motion.div 
+              variants={itemVariants}
+              className="lg:col-span-3 flex flex-col justify-center relative lg:pl-8"
+            >
+              {/* Subtle vertical divider on desktop */}
+              <div className="hidden lg:block absolute left-0 top-4 bottom-4 w-px bg-white/5" />
+              
+              <div className="flex flex-col space-y-6 text-left">
+                {features.map((feature, idx) => {
+                  const Icon = feature.icon;
+                  return (
+                    <div key={idx} className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-slate-950 border border-white/5 flex items-center justify-center shadow-inner">
+                        <Icon size={18} className="text-[#4F6EF7]" />
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="text-sm font-semibold text-white tracking-wide">
+                          {feature.title}
+                        </h4>
+                        <p className="text-base text-slate-400 leading-relaxed">
+                          {feature.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 }
+

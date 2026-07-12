@@ -5,7 +5,6 @@ import About from './components/About';
 import Stats from './components/Stats';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Projects2 from './components/Projects2';
 import GitHubShowcase from './components/GitHubShowcase';
 import Journey from './components/Journey';
 import Achievements from './components/Achievements';

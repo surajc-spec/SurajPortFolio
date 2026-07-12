@@ -10,33 +10,17 @@ const projects = [
     image: '/noteshare1.png',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/surajc-spec/NotesApp',
-    live: 'https://noteshare.online',
-    highlight: '220+ Registered Users',
-    badgeIcon: Flame,
-    badgeColor: 'text-amber-400 bg-amber-950/40 border-amber-800/30'
+    live: 'https://noteshare.online'
   },
   {
-    title: 'DermScan AI',
-    description: 'AI-powered skin cancer detection system built using MobileNetV2 and deep learning techniques. Achieved over 85% accuracy and includes Grad-CAM explainability.',
-    image: '/dermscan.png',
-    tech: ['Python', 'TensorFlow', 'MobileNetV2', 'Flask'],
-    github: 'https://github.com/surajchougule/dermscan-ai',
-    live: 'https://dermscan-ai.render.com',
-    highlight: '85%+ Scanning Accuracy',
-    badgeIcon: Brain,
-    badgeColor: 'text-indigo-400 bg-indigo-950/40 border-indigo-800/30'
-  },
-  {
-    title: 'Internship Portal',
-    description: 'Hackathon-winning internship platform with resume parsing, internship discovery, and candidate management features.',
-    image: '/internship.png',
-    tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    github: 'https://github.com/surajchougule/internship-portal',
-    live: 'https://internship-portal.vercel.app',
-    highlight: 'Hackathon Winner Platform',
-    badgeIcon: Award,
-    badgeColor: 'text-emerald-400 bg-emerald-950/40 border-emerald-800/30'
-  }
+  title: "Aura AI",
+  description:
+    "Multilingual AI text-to-image generator that transforms prompts in multiple Indian languages into stunning AI-generated images.",
+  image: "/AuraAI.png",
+  tech: ["React", "Node.js", "Express", "MongoDB"],
+  github: "https://github.com/surajc-spec/MultilingualTextToImageGenerator",
+  live: "https://aura-ai-rho-rust.vercel.app/"
+}
 ];
 
 export default function Projects() {

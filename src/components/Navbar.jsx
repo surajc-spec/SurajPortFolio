@@ -45,9 +45,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center space-x-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-blue-500 flex items-center justify-center font-bold text-white text-lg shadow-[0_0_20px_rgba(139,92,246,0.3)] group-hover:shadow-[0_0_25px_rgba(139,92,246,0.6)] transition-all duration-300">
-            SC
-          </div>
+        <div className="w-10 h-10 rounded-xl bg-[#4F6EF7] flex items-center justify-center font-bold text-white text-lg shadow-[0_0_20px_rgba(79,110,247,0.3)] group-hover:shadow-[0_0_25px_rgba(79,110,247,0.6)] transition-all duration-300">
+  SC
+</div>
           <span className="font-heading font-bold text-xl tracking-wide bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent group-hover:to-white transition-all duration-300">
             Suraj Chougule
           </span>

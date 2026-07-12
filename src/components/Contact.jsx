@@ -247,20 +247,20 @@ export default function Contact() {
                   </div>
 
                   {/* Submit button */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex items-center justify-center space-x-2 px-6 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white font-semibold shadow-[0_4px_25px_rgba(139,92,246,0.25)] hover:shadow-[0_4px_35px_rgba(139,92,246,0.4)] transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:hover:translate-y-0"
-                  >
-                    {isSubmitting ? (
-                      <span>Sending Message...</span>
-                    ) : (
-                      <>
-                        <span>Send Message</span>
-                        <Send size={16} />
-                      </>
-                    )}
-                  </button>
+                 <button
+  type="submit"
+  disabled={isSubmitting}
+  className="w-full flex items-center justify-center space-x-2 px-6 py-4 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.25)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.4)] transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:hover:translate-y-0"
+>
+  {isSubmitting ? (
+    <span>Sending Message...</span>
+  ) : (
+    <>
+      <span>Send Message</span>
+      <Send size={16} />
+    </>
+  )}
+</button>
                 </form>
               )}
             </motion.div>

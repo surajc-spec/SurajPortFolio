@@ -79,11 +79,10 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <About />
-        <Stats />
+        {/* <Stats /> */}
         <Skills />
         <Projects />
-        <Projects2 />
-        <GitHubShowcase />
+        {/* <GitHubShowcase /> */}
         <Journey />
         <Achievements />
         <Education />

@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'NoteShare',
     description: 'A MERN-based student platform for sharing academic notes and previous-year question papers. Features authentication, admin dashboard, search functionality, analytics, and note management.',
-    image: '/noteshare.png',
+    image: '/noteshare1.png',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/surajc-spec/NotesApp',
     live: 'https://noteshare.online',
@@ -32,17 +32,6 @@ const projects = [
     image: '/internship.png',
     tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     github: 'https://github.com/surajchougule/internship-portal',
-    live: 'https://internship-portal.vercel.app',
-    highlight: 'Hackathon Winner Platform',
-    badgeIcon: Award,
-    badgeColor: 'text-emerald-400 bg-emerald-950/40 border-emerald-800/30'
-  },
-  {
-    title: 'Internship Portal',
-    description: 'Hackathon-winning internship platform with resume parsing, internship discovery, and candidate management features.',
-    image: '/internship.png',
-    tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    github: 'https://github.com/surajc-spec/internship-portal',
     live: 'https://internship-portal.vercel.app',
     highlight: 'Hackathon Winner Platform',
     badgeIcon: Award,
@@ -98,9 +87,9 @@ export default function Projects() {
                   
                   {/* Floating metric badge */}
                   <div className="absolute top-4 left-4">
-                    <span className={`inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold backdrop-blur-md ${project.badgeColor}`}>
-                      <BadgeIcon size={12} />
-                      <span>{project.highlight}</span>
+                    <span className={`inline-flex items-center space-x-1.5 px-3 py-1.5  text-xs font-semibold  `}>
+                      {/* <BadgeIcon size={12} /> */}
+                      {/* <span>{project.highlight}</span> */}
                     </span>
                   </div>
                 </div>

@@ -1,150 +1,108 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Server, Database, Brain, Wrench, CheckCircle2 } from 'lucide-react';
+import { FaJava } from 'react-icons/fa';
+import { AiOutlineApi } from 'react-icons/ai';
+import { 
+  SiJavascript, 
+  SiReact, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiTailwindcss, 
+  SiGit, 
+  SiHtml5, 
+  SiCss,
+  SiRedis,
+  SiJsonwebtokens,
+  SiMongoose,
+  SiPostman,
+  SiGithub
+} from 'react-icons/si';
 
-const skillCategories = [
-  {
-    id: 'frontend',
-    title: 'Frontend Development',
-    icon: Code,
-    color: 'text-cyan-400 border-cyan-500/20 bg-cyan-950/10',
-    glowColor: 'rgba(6, 182, 212, 0.15)',
-    skills: ['React', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3']
-  },
-  {
-    id: 'backend',
-    title: 'Backend Development',
-    icon: Server,
-    color: 'text-violet-400 border-violet-500/20 bg-violet-950/10',
-    glowColor: 'rgba(139, 92, 246, 0.15)',
-    skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Authentication']
-  },
-  {
-    id: 'database',
-    title: 'Database Management',
-    icon: Database,
-    color: 'text-emerald-400 border-emerald-500/20 bg-emerald-950/10',
-    glowColor: 'rgba(16, 185, 129, 0.15)',
-    skills: ['MongoDB', 'Mongoose']
-  },
-  {
-    id: 'programming',
-    title: 'Programming Languages',
-    icon: Brain,
-    color: 'text-amber-400 border-amber-500/20 bg-amber-950/10',
-    glowColor: 'rgba(245, 158, 11, 0.15)',
-    skills: ['Java', 'Python', 'JavaScript']
-  },
-  {
-    id: 'tools',
-    title: 'Tools & Platform Dev',
-    icon: Wrench,
-    color: 'text-rose-400 border-rose-500/20 bg-rose-950/10',
-    glowColor: 'rgba(244, 63, 94, 0.15)',
-    skills: ['Git', 'GitHub', 'Postman', 'Vercel', 'Render']
-  }
+const skills = [
+  { name: 'Java', icon: FaJava, color: '#007396' },
+  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
+  { name: 'Express.js', icon: SiExpress, color: '#FFFFFF' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'Redis', icon: SiRedis, color: '#DC382D' },
+  { name: 'REST API', icon: AiOutlineApi, color: '#4F6EF7' },
+  { name: 'JWT', icon: SiJsonwebtokens, color: '#000000' },
+  { name: 'Mongoose', icon: SiMongoose, color: '#880000' },
+  { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+  { name: 'Git', icon: SiGit, color: '#F05032' },
+  { name: 'GitHub', icon: SiGithub, color: '#181717' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+  { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
+  { name: 'CSS3', icon: SiCss, color: '#1572B6' }
 ];
 
 export default function Skills() {
-  const [hoveredCategory, setHoveredCategory] = useState(null);
-
   const containerVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.08
+        staggerChildren: 0.05
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 25, opacity: 0 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
-      y: 0,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 80, damping: 12 }
+      y: 0,
+      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
-      {/* Background Glows */}
-      <div className="glow-orb glow-orb-purple w-[500px] h-[500px] top-[10%] left-[-15%]" />
-      <div className="glow-orb glow-orb-cyan w-[400px] h-[400px] bottom-[10%] right-[-10%]" />
-
+    <section id="skills" className="py-20 relative overflow-hidden bg-slate-950/20">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Block */}
-        <div className="max-w-3xl mb-16 text-left">
-          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-3">
-            Expertise
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
-            Technologies I work with.
+        <div className="max-w-3xl mb-12 text-left">
+          <span className="text-sm font-bold tracking-wide text-[#4F6EF7] uppercase block mb-2">
+            SKILLS
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            Technologies I work with
           </h2>
-          <p className="text-lg text-slate-400 leading-relaxed">
-            I specialize in full-stack MERN development, scripting, database structures, and production-ready deployments. Here are the core languages, frameworks, and tools in my repertoire.
-          </p>
         </div>
 
-        {/* Skill Category Cards Grid */}
+        {/* Skill Cards Showcase Layout */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-wrap md:justify-center md:items-center gap-6 sm:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
+          viewport={{ once: true, margin: '-80px' }}
         >
-          {skillCategories.map((category) => {
-            const Icon = category.icon;
-            const isHovered = hoveredCategory === category.id;
-            
+          {skills.map((skill) => {
+            const Icon = skill.icon;
             return (
               <motion.div
-                key={category.id}
+                key={skill.name}
                 variants={itemVariants}
-                className="relative p-6 rounded-2xl glass-card text-left transition-all duration-300 border-white/5"
-                onMouseEnter={() => setHoveredCategory(category.id)}
-                onMouseLeave={() => setHoveredCategory(null)}
-                style={{
-                  boxShadow: isHovered ? `0 0 30px ${category.glowColor}` : 'none',
-                  borderColor: isHovered ? category.glowColor : 'rgba(255, 255, 255, 0.05)'
-                }}
+                className="flex flex-col items-center group cursor-pointer"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.2 }}
               >
-                {/* Visual Category Header */}
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center ${category.color}`}>
-                    <Icon size={20} />
-                  </div>
-                  <h3 className="text-lg font-heading font-bold text-white tracking-wide">
-                    {category.title}
-                  </h3>
+                {/* Icon Card Frame */}
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center transition-all duration-300 group-hover:border-[#4F6EF7]/50 shadow-lg mb-3">
+                  <Icon 
+                    size={28} 
+                    style={{ color: skill.color }} 
+                    className="transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-
-                {/* Skill List */}
-                <div className="flex flex-col space-y-3">
-                  {category.skills.map((skill, sIdx) => (
-                    <div 
-                      key={skill}
-                      className="flex items-center justify-between p-3 rounded-xl bg-slate-900/40 border border-white/5 hover:bg-slate-900/80 hover:border-white/10 transition-all duration-200 group"
-                    >
-                      <div className="flex items-center space-x-2.5">
-                        <CheckCircle2 size={15} className="text-violet-500 group-hover:text-violet-400 transition-colors" />
-                        <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
-                          {skill}
-                        </span>
-                      </div>
-                      
-                      {/* Skill Status Badge / Level */}
-                      <span className="text-[10px] uppercase font-mono tracking-widest text-slate-600 group-hover:text-violet-400 transition-colors">
-                        Verified
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Corner accent glow */}
-                <div className="absolute top-0 right-0 w-16 h-16 rounded-bl-full bg-white/2 pointer-events-none opacity-20" />
+                
+                {/* Technology Name */}
+                <span className="text-xs sm:text-sm font-medium text-slate-300 group-hover:text-white transition-colors duration-300 text-center">
+                  {skill.name}
+                </span>
               </motion.div>
             );
           })}
@@ -154,3 +112,4 @@ export default function Skills() {
     </section>
   );
 }
+

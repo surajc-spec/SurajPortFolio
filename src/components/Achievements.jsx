@@ -5,31 +5,24 @@ import { Trophy, Rocket, Cpu, Terminal, ShieldCheck } from 'lucide-react';
 const achievements = [
   {
     icon: Trophy,
-    title: '🏆 1st Prize – Dhruva Nexus Hackathon',
+    title: '1st Prize Dhruva Nexus Hackathon',
     description: 'Secured the first prize at Pune university hackathon by engineering an end-to-end recruitment matching portal in under 36 hours.',
     accent: 'border-yellow-500/20 bg-yellow-950/10 text-yellow-400',
     shadow: 'shadow-[0_4px_30px_rgba(234,179,8,0.05)] hover:shadow-[0_4px_40px_rgba(234,179,8,0.15)]'
   },
   {
     icon: Rocket,
-    title: '🚀 Built NoteShare with 220+ Users',
+    title: 'Built NoteShare with 150+ Users',
     description: 'Developed and scaled a college note management application to support university students, resolving file storage and routing paths.',
     accent: 'border-violet-500/20 bg-violet-950/10 text-violet-400',
     shadow: 'shadow-[0_4px_30px_rgba(139,92,246,0.05)] hover:shadow-[0_4px_40px_rgba(139,92,246,0.15)]'
   },
   {
     icon: Cpu,
-    title: '🤖 Developed DermScan AI (85%+ Accuracy)',
+    title: 'Developed DermScan AI (85%+ Accuracy)',
     description: 'Created a deep learning image diagnostic scanner for skin lesions using MobileNetV2 with dynamic Grad-CAM model activations.',
     accent: 'border-blue-500/20 bg-blue-950/10 text-blue-400',
     shadow: 'shadow-[0_4px_30px_rgba(59,130,246,0.05)] hover:shadow-[0_4px_40px_rgba(59,130,246,0.15)]'
-  },
-  {
-    icon: Terminal,
-    title: '💻 Practicing DSA & Problem Solving',
-    description: 'Consistently practicing algorithms, queues, hashes, graphs, and system designs to ensure write-speed and clean solution engineering.',
-    accent: 'border-emerald-500/20 bg-emerald-950/10 text-emerald-400',
-    shadow: 'shadow-[0_4px_30px_rgba(16,185,129,0.05)] hover:shadow-[0_4px_40px_rgba(16,185,129,0.15)]'
   }
 ];
 

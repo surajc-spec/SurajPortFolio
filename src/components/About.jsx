@@ -62,7 +62,7 @@ export default function About() {
             >
               <div className="relative group w-full max-w-[280px] lg:w-[300px] lg:h-[420px] aspect-[3/4] lg:aspect-auto rounded-2xl overflow-hidden border border-[#4F6EF7]/20 shadow-[0_0_20px_rgba(79,110,247,0.1)] transition-all duration-300 hover:border-[#5B7CFA]/30 hover:shadow-[0_0_30px_rgba(79,110,247,0.2)]">
                 <img 
-                  src="/ProfilePhoto.jpeg" 
+                  src="/ProfilePhoto2.png" 
                   alt="Profile" 
                   className="w-full h-full object-cover object-center rounded-2xl transition-transform duration-500 group-hover:scale-105"
                 />

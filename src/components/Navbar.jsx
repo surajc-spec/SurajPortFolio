@@ -90,7 +90,6 @@ export default function Navbar() {
   className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.3)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
 >
   <span>View Resume</span>
-  <Download size={18} />
 </a>
         </div>
 

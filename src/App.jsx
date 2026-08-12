@@ -2,11 +2,8 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Stats from './components/Stats';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import GitHubShowcase from './components/GitHubShowcase';
-import Journey from './components/Journey';
 import Achievements from './components/Achievements';
 import Education from './components/Education';
 import Contact from './components/Contact';
@@ -78,11 +75,8 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <About />
-        {/* <Stats /> */}
         <Skills />
         <Projects />
-        {/* <GitHubShowcase /> */}
-        <Journey />
         <Achievements />
         <Education />
         <Contact />

@@ -70,7 +70,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p variants={itemVariants} className="text-lg text-slate-400 max-w-xl leading-relaxed">
-            I build modern web applications using React, Node.js, Express, and MongoDB with a strong focus on performance, clean architecture, scalability, and exceptional user experiences.
+           I design and build production-grade web apps with a focus on clean architecture, performance, and real-world impact. Passionate about creating tools that people actually use. 
           </motion.p>
 
           {/* Buttons */}

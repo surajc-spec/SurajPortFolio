@@ -16,13 +16,6 @@ const achievements = [
     description: 'Developed and scaled a college note management application to support university students, resolving file storage and routing paths.',
     accent: 'border-violet-500/20 bg-violet-950/10 text-violet-400',
     shadow: 'shadow-[0_4px_30px_rgba(139,92,246,0.05)] hover:shadow-[0_4px_40px_rgba(139,92,246,0.15)]'
-  },
-  {
-    icon: Cpu,
-    title: 'Developed DermScan AI (85%+ Accuracy)',
-    description: 'Created a deep learning image diagnostic scanner for skin lesions using MobileNetV2 with dynamic Grad-CAM model activations.',
-    accent: 'border-blue-500/20 bg-blue-950/10 text-blue-400',
-    shadow: 'shadow-[0_4px_30px_rgba(59,130,246,0.05)] hover:shadow-[0_4px_40px_rgba(59,130,246,0.15)]'
   }
 ];
 

@@ -6,17 +6,17 @@ const features = [
   {
     icon: Code2,
     title: 'Clean Code',
-    desc: 'I write maintainable, scalable, and efficient code.'
+    desc: 'Maintainable. Scalable. Readable.'
   },
   {
     icon: Rocket,
     title: 'Performance Focused',
-    desc: 'I build fast, optimized, and high-performance applications.'
+    desc: 'Fast. Optimized. Production-ready.'
   },
   {
     icon: Lightbulb,
     title: 'Problem Solver',
-    desc: 'I enjoy solving real-world problems with smart and simple solutions.'
+    desc: 'Real problems. Smart solutions.'
   }
 ];
 

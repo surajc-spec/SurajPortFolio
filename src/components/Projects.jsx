@@ -6,7 +6,7 @@ import { Github } from './Icons';
 const projects = [
   {
     title: 'NoteShare',
-    description: 'A MERN-based student platform for sharing academic notes and previous-year question papers. Features authentication, admin dashboard, search functionality, analytics, and note management.',
+    description: 'NoteShare is a MERN-based student community platform for sharing academic notes and previous-year question papers. It serves 162+ organic users with a 27-minute avg session, delivering 1,500+ RPS and 77x latency improvement (315ms→4ms) via multi-level caching. Built with React, Node.js, Express, MongoDB, and Redis, it features secure PDF viewing, Google OAuth, OTP verification, anti-scraping security, and 99.9% availability on zero-cost infrastructure.',
     image: '/noteshare1.png',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/surajc-spec/NotesApp',
@@ -15,7 +15,7 @@ const projects = [
   {
   title: "Aura AI",
   description:
-    "Multilingual AI text-to-image generator that transforms prompts in multiple Indian languages into stunning AI-generated images.",
+    "Aura AI is a MERN-based multilingual image generation platform supporting 11 Indian languages with 100% language accessibility. It integrates Gemini API for translation and Cloudflare AI for high-speed generation, with ImageKit for cloud storage. Handles 100+ concurrent requests with fault-tolerant fallback, and features JWT authentication, rate limiting, and a user dashboard making AI art accessible to all.",
   image: "/AuraAI.png",
   tech: ["React", "Node.js", "Express", "MongoDB"],
   github: "https://github.com/surajc-spec/MultilingualTextToImageGenerator",
@@ -122,7 +122,7 @@ export default function Projects() {
                         rel="noreferrer"
                         className="flex items-center space-x-1.5 text-xs font-semibold text-violet-400 hover:text-violet-300 transition-colors duration-200 ml-auto"
                       >
-                        <span>Live Demo</span>
+                        <span>Live Link</span>
                         <ExternalLink size={14} />
                       </a>
                     </div>

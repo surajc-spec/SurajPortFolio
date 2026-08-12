@@ -43,6 +43,9 @@ export default function Contact() {
     const templateParams = {
       name: name,
       email: email,
+      from_name: name,
+      from_email: email,
+      reply_to: email,
       subject: subject,
       message: message,
     };

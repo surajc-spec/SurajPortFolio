@@ -26,7 +26,7 @@ const projects = [
   description:
     "A production-oriented expense management platform that simplifies group expense tracking, flexible expense splitting, balance calculation, and debt settlement. It uses ACID-safe PostgreSQL transactions, integer-based paise storage, JWT authentication with RBAC, Redis-based rate limiting, idempotency, audit logging, and a greedy priority-queue algorithm to reliably minimize settlement transactions.",
   image: "/EquiSplit.png",
-  tech: ["React", "Node.js", "Express", "MongoDB"],
+  tech: ["React", "Node.js", "Express", "PostgreSQL (Supabase)"],
   github: "https://github.com/surajc-spec/ExpenseSplitter",
   live: "https://equi-split-hazel.vercel.app/"
 }

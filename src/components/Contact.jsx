@@ -75,7 +75,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-slate-950/10">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 relative overflow-hidden bg-slate-950/10">
       {/* Background glow orbs */}
       <div className="glow-orb glow-orb-purple w-[500px] h-[500px] bottom-[-10%] right-[-10%]" />
       <div className="glow-orb glow-orb-blue w-[400px] h-[400px] top-[10%] left-[-15%]" />
@@ -83,33 +83,33 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Block */}
-        <div className="max-w-3xl mb-16 text-left">
-          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-3">
+        <div className="max-w-3xl mb-8 sm:mb-12 md:mb-16 text-left">
+          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-2 sm:mb-3">
             Contact
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3 sm:mb-6">
             Let's build something together.
           </h2>
-          <p className="text-lg text-slate-400 leading-relaxed">
+          <p className="text-sm sm:text-lg text-slate-400 leading-relaxed">
             I am currently open to full-stack, frontend, and backend internship roles. Send me a message and I will reply within 24 hours.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-stretch">
           
           {/* Left Column: Contact Cards */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             
-            <div className="p-8 rounded-3xl glass-card border-white/5 text-left h-full flex flex-col justify-between space-y-8">
+            <div className="p-5 sm:p-8 rounded-3xl glass-card border-white/5 text-left h-full flex flex-col justify-between space-y-6 sm:space-y-8">
               <div>
-                <h3 className="text-xl font-heading font-bold text-white tracking-wide mb-2">
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-white tracking-wide mb-2">
                   Contact Information
                 </h3>
-                <p className="text-sm text-slate-400 leading-relaxed mb-8">
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6 sm:mb-8">
                   Reach out directly via email, message me on LinkedIn, or check out my repositories on GitHub.
                 </p>
 
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {/* Location Info */}
                   <div className="flex items-center space-x-4">
                     <div className="w-10 h-10 rounded-xl bg-slate-900/90 border border-white/5 flex items-center justify-center text-violet-400">
@@ -129,7 +129,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-widest font-heading">Email</h4>
-                        <p className="text-sm text-slate-200 font-medium font-mono">surajchougule378@gmail.com</p>
+                        <p className="text-xs sm:text-sm text-slate-200 font-medium font-mono">surajchougule378@gmail.com</p>
                       </div>
                     </div>
                     <button 
@@ -144,22 +144,22 @@ export default function Contact() {
               </div>
 
               {/* Social Channels Link Icons */}
-              <div className="pt-8 border-t border-white/5 flex items-center space-x-4">
+              <div className="pt-6 sm:pt-8 border-t border-white/5 flex items-center space-x-4">
                 <a
                   href="https://linkedin.com/in/suraj-chougule"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 shadow-sm"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={18} />
                 </a>
                 <a
                   href="https://github.com/surajc-spec"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 shadow-sm"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 shadow-sm"
                 >
-                  <Github size={20} />
+                  <Github size={18} />
                 </a>
               </div>
 
@@ -173,27 +173,27 @@ export default function Contact() {
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="p-8 rounded-3xl glass-card border border-white/5 text-left h-full"
+              className="p-5 sm:p-8 rounded-3xl glass-card border border-white/5 text-left h-full"
             >
               {submitted ? (
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex flex-col items-center justify-center text-center py-20"
+                  className="flex flex-col items-center justify-center text-center py-12 sm:py-20"
                 >
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 shadow-md shadow-emerald-500/5">
-                    <CheckCircle className="w-8 h-8 text-emerald-400" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4 sm:mb-6 shadow-md shadow-emerald-500/5">
+                    <CheckCircle className="w-7 h-7 sm:w-8 sm:h-8 text-emerald-400" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                  <p className="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
                     Thank you for reaching out. Your message has been received, and Suraj will respond shortly.
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {/* Name */}
-                    <div className="space-y-2">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label htmlFor="name" className="text-xs font-semibold uppercase tracking-widest text-slate-500">Your Name</label>
                       <input
                         type="text"
@@ -202,12 +202,12 @@ export default function Contact() {
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300"
                       />
                     </div>
 
                     {/* Email */}
-                    <div className="space-y-2">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label htmlFor="email" className="text-xs font-semibold uppercase tracking-widest text-slate-500">Email Address</label>
                       <input
                         type="email"
@@ -216,13 +216,13 @@ export default function Contact() {
                         placeholder="john@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300"
                       />
                     </div>
                   </div>
 
                   {/* Subject */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <label htmlFor="subject" className="text-xs font-semibold uppercase tracking-widest text-slate-500">Subject</label>
                     <input
                       type="text"
@@ -231,21 +231,21 @@ export default function Contact() {
                       placeholder="Collaboration inquiry / Internship role"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300"
                     />
                   </div>
 
                   {/* Message */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <label htmlFor="message" className="text-xs font-semibold uppercase tracking-widest text-slate-500">Message</label>
                     <textarea
                       id="message"
                       required
-                      rows={5}
+                      rows={4}
                       placeholder="Hi Suraj, I'd love to chat about a vacancy..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300 resize-none"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm rounded-xl bg-slate-950/80 border border-white/5 text-white placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300 resize-none"
                     />
                   </div>
 
@@ -253,7 +253,7 @@ export default function Contact() {
                  <button
   type="submit"
   disabled={isSubmitting}
-  className="w-full flex items-center justify-center space-x-2 px-6 py-4 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.25)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.4)] transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:hover:translate-y-0"
+  className="w-full flex items-center justify-center space-x-2 px-6 py-3.5 sm:py-4 text-sm sm:text-base rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.25)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.4)] transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:hover:translate-y-0"
 >
   {isSubmitting ? (
     <span>Sending Message...</span>

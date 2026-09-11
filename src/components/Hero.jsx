@@ -32,18 +32,18 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-20 flex items-center justify-center bg-grid-pattern overflow-hidden">
+    <section id="home" className="relative min-h-[calc(100vh-4rem)] lg:min-h-screen pt-24 pb-12 sm:pt-32 sm:pb-20 flex items-center justify-center bg-grid-pattern overflow-hidden">
       
       {/* Background Glow Mesh Orbs */}
       <div className="glow-orb glow-orb-purple w-[600px] h-[600px] top-[-10%] left-[-10%]" />
       <div className="glow-orb glow-orb-blue w-[500px] h-[500px] bottom-[10%] right-[-10%]" />
       <div className="glow-orb glow-orb-cyan w-[300px] h-[300px] top-[30%] left-[45%]" />
 
-      <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
         
         {/* Left: Text Content */}
         <motion.div 
-          className="lg:col-span-7 flex flex-col space-y-6 text-left"
+          className="lg:col-span-7 flex flex-col space-y-4 sm:space-y-6 text-left"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -59,25 +59,25 @@ export default function Hero() {
           {/* Heading */}
          <motion.h1
   variants={itemVariants}
-  className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-white"
+  className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-white"
 >
   Hi, I'm <span className="text-[#4F6EF7]">Suraj Chougule</span>
 
-  <span className="block text-2xl sm:text-3xl md:text-4xl mt-3 font-semibold text-slate-300">
+  <span className="block text-xl sm:text-3xl md:text-4xl mt-2 sm:mt-3 font-semibold text-slate-300">
     Full Stack Developer
   </span>
 </motion.h1>
 
           {/* Subtitle */}
-          <motion.p variants={itemVariants} className="text-lg text-slate-400 max-w-xl leading-relaxed">
+          <motion.p variants={itemVariants} className="text-sm sm:text-lg text-slate-400 max-w-xl leading-relaxed">
            I design and build production-grade web apps with a focus on clean architecture, performance, and real-world impact. Passionate about creating tools that people actually use. 
           </motion.p>
 
           {/* Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-2">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 sm:gap-4 pt-1 sm:pt-2">
           <a
   href="#projects"
-  className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.3)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
+  className="flex items-center space-x-2 px-5 py-3 sm:px-6 sm:py-3.5 text-sm sm:text-base rounded-xl bg-[#4F6EF7] hover:bg-[#5B7CFA] text-white font-semibold shadow-[0_4px_25px_rgba(79,110,247,0.3)] hover:shadow-[0_4px_35px_rgba(79,110,247,0.5)] transition-all duration-300 hover:-translate-y-0.5 group"
 >
               <span>View Projects</span>
               <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
@@ -85,7 +85,7 @@ export default function Hero() {
             
             <a
               href="#contact"
-              className="flex items-center space-x-2 px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5"
+              className="flex items-center space-x-2 px-5 py-3 sm:px-6 sm:py-3.5 text-sm sm:text-base rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5"
             >
               <MessageSquare size={18} className="text-violet-400" />
               <span>Contact Me</span>
@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
 
             {/* Code Lines */}
-            <div className="p-6 font-mono text-sm leading-relaxed overflow-x-auto text-left min-h-[300px] bg-[#07051a]/40">
+            <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto text-left min-h-[210px] sm:min-h-[300px] bg-[#07051a]/40">
               <div className="flex">
                 <span className="text-slate-600 select-none mr-4 w-4">1</span>
                 <span className="text-violet-400">const</span>{' '}

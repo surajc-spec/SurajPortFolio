@@ -59,22 +59,22 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden bg-slate-950/20">
+    <section id="skills" className="py-10 sm:py-16 md:py-20 relative overflow-hidden bg-slate-950/20">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Block */}
-        <div className="max-w-3xl mb-12 text-left">
+        <div className="max-w-3xl mb-6 sm:mb-10 md:mb-12 text-left">
           <span className="text-sm font-bold tracking-wide text-[#4F6EF7] uppercase block mb-2">
             SKILLS
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white">
             Technologies I work with
           </h2>
         </div>
 
         {/* Skill Cards Showcase Layout */}
         <motion.div 
-          className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-wrap md:justify-center md:items-center gap-6 sm:gap-8"
+          className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-wrap md:justify-center md:items-center gap-3 sm:gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -91,9 +91,9 @@ export default function Skills() {
                 transition={{ duration: 0.2 }}
               >
                 {/* Icon Card Frame */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center transition-all duration-300 group-hover:border-[#4F6EF7]/50 shadow-lg mb-3">
+                <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center transition-all duration-300 group-hover:border-[#4F6EF7]/50 shadow-lg mb-2 sm:mb-3">
                   <Icon 
-                    size={28} 
+                    size={24} 
                     style={{ color: skill.color }} 
                     className="transition-transform duration-300 group-hover:scale-105"
                   />

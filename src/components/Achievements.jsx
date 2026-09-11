@@ -21,7 +21,7 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-24 relative overflow-hidden bg-slate-950/20 border-b border-white/5">
+    <section id="achievements" className="py-12 sm:py-16 md:py-24 relative overflow-hidden bg-slate-950/20 border-b border-white/5">
       {/* Background glow orb */}
       <div className="glow-orb glow-orb-purple w-[400px] h-[400px] top-[10%] right-[-10%]" />
       <div className="glow-orb glow-orb-blue w-[400px] h-[400px] bottom-[10%] left-[-15%]" />
@@ -29,20 +29,20 @@ export default function Achievements() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Block */}
-        <div className="max-w-3xl mb-16 text-left">
-          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-3">
+        <div className="max-w-3xl mb-8 sm:mb-12 md:mb-16 text-left">
+          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-2 sm:mb-3">
             Milestones
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3 sm:mb-6">
             Key Achievements
           </h2>
-          <p className="text-lg text-slate-400 leading-relaxed">
+          <p className="text-sm sm:text-lg text-slate-400 leading-relaxed">
             A testament to my drive for building systems, taking initiative in competitive events, and engineering platforms that add value.
           </p>
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {achievements.map((ach, idx) => {
             const Icon = ach.icon;
             return (
@@ -52,7 +52,7 @@ export default function Achievements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`relative p-6 rounded-2xl glass-card border border-white/5 transition-all duration-300 hover:border-white/10 flex items-start space-x-5 text-left ${ach.shadow}`}
+                className={`relative p-4 sm:p-6 rounded-2xl glass-card border border-white/5 transition-all duration-300 hover:border-white/10 flex items-start space-x-4 sm:space-x-5 text-left ${ach.shadow}`}
               >
                 {/* Accent Icon Frame */}
                 <div className={`w-12 h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${ach.accent} shadow-sm`}>

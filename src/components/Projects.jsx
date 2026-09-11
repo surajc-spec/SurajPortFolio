@@ -20,32 +20,41 @@ const projects = [
   tech: ["React", "Node.js", "Express", "MongoDB"],
   github: "https://github.com/surajc-spec/MultilingualTextToImageGenerator",
   live: "https://aura-ai-rho-rust.vercel.app/"
+},
+  {
+  title: "EquiSplit",
+  description:
+    "Aura AI is a MERN-based multilingual image generation platform supporting 11 Indian languages with 100% language accessibility. It integrates Gemini API for translation and Cloudflare AI for high-speed generation, with ImageKit for cloud storage. Handles 100+ concurrent requests with fault-tolerant fallback, and features JWT authentication, rate limiting, and a user dashboard making AI art accessible to all.",
+  image: "/EquiSplit.png",
+  tech: ["React", "Node.js", "Express", "MongoDB"],
+  github: "https://github.com/surajc-spec/ExpenseSplitter",
+  live: "https://equi-split-hazel.vercel.app/"
 }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-slate-950/10 border-b border-white/5">
+    <section id="projects" className="py-12 sm:py-16 md:py-24 relative overflow-hidden bg-slate-950/10 border-b border-white/5">
       {/* Background glow orb */}
       <div className="glow-orb glow-orb-purple w-[600px] h-[600px] bottom-[-20%] left-[-10%]" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Block */}
-        <div className="max-w-3xl mb-16 text-left">
-          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-3">
+        <div className="max-w-3xl mb-8 sm:mb-12 md:mb-16 text-left">
+          <p className="text-sm font-bold tracking-widest text-violet-400 uppercase mb-2 sm:mb-3">
             Portfolio
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3 sm:mb-6">
             Featured Projects
           </h2>
-          <p className="text-lg text-slate-400 leading-relaxed">
+          <p className="text-sm sm:text-lg text-slate-400 leading-relaxed">
             A showcase of applications combining modern frontend frameworks, backend server engineering, databases, and AI modeling to solve real problems.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-8">
           {projects.map((project, idx) => {
             const BadgeIcon = project.badgeIcon;
             return (
@@ -79,26 +88,26 @@ export default function Projects() {
                 </div>
 
                 {/* Content Panel */}
-                <div className="p-6 flex flex-col flex-grow justify-between text-left">
+                <div className="p-4 sm:p-6 flex flex-col flex-grow justify-between text-left">
                   <div>
                     {/* Title */}
-                    <h3 className="text-xl font-heading font-bold text-white tracking-wide mb-3 group-hover:text-violet-400 transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-heading font-bold text-white tracking-wide mb-2 sm:mb-3 group-hover:text-violet-400 transition-colors duration-300">
                       {project.title}
                     </h3>
                     
                     {/* Description */}
-                    <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 sm:mb-6">
                       {project.description}
                     </p>
                   </div>
 
                   <div>
                     {/* Tech Badges */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                       {project.tech.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-1 rounded-md text-[10px] uppercase font-mono tracking-wider font-semibold bg-slate-900 text-slate-400 border border-slate-800"
+                          className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-[10px] uppercase font-mono tracking-wider font-semibold bg-slate-900 text-slate-400 border border-slate-800"
                         >
                           {tag}
                         </span>

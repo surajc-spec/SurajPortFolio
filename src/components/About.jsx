@@ -44,23 +44,23 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-slate-950/20">
+    <section id="about" className="py-12 sm:py-16 md:py-24 relative overflow-hidden bg-slate-950/20">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="bg-slate-900/40 border border-white/5 rounded-3xl p-8 md:p-12 lg:p-16 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+          className="bg-slate-900/40 border border-white/5 rounded-3xl p-5 sm:p-8 md:p-12 lg:p-16 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 items-center">
             
             {/* LEFT COLUMN: Profile Photo */}
             <motion.div 
               variants={itemVariants} 
               className="lg:col-span-4 flex justify-center items-center"
             >
-              <div className="relative group w-full max-w-[280px] lg:w-[300px] lg:h-[420px] aspect-[3/4] lg:aspect-auto rounded-2xl overflow-hidden border border-[#4F6EF7]/20 shadow-[0_0_20px_rgba(79,110,247,0.1)] transition-all duration-300 hover:border-[#5B7CFA]/30 hover:shadow-[0_0_30px_rgba(79,110,247,0.2)]">
+              <div className="relative group w-full max-w-[200px] sm:max-w-[260px] lg:w-[300px] lg:h-[420px] aspect-square sm:aspect-[3/4] lg:aspect-auto rounded-2xl overflow-hidden border border-[#4F6EF7]/20 shadow-[0_0_20px_rgba(79,110,247,0.1)] transition-all duration-300 hover:border-[#5B7CFA]/30 hover:shadow-[0_0_30px_rgba(79,110,247,0.2)]">
                 <img 
                   src="/ProfilePhoto2.png" 
                   alt="Profile" 
@@ -72,26 +72,26 @@ export default function About() {
             {/* CENTER COLUMN: Content */}
             <motion.div 
               variants={itemVariants}
-              className="lg:col-span-5 flex flex-col justify-center text-left space-y-6"
+              className="lg:col-span-5 flex flex-col justify-center text-left space-y-4 sm:space-y-6"
             >
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <span className="text-sm font-bold tracking-widest text-[#4F6EF7] uppercase block">
                   ABOUT ME
                 </span>
                 
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+                <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
                   Turning ideas into <span className="text-[#4F6EF7]">real-world products.</span>
                 </h2>
                 
-                <p className="text-base text-slate-400 leading-relaxed font-normal">
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
                   I'm a Full Stack Developer passionate about building modern web applications and turning ideas into real-world products. I enjoy solving complex problems, learning new technologies, and creating scalable, performance-focused solutions with clean user experiences.
                 </p>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-1 sm:pt-2">
                 <a 
                   href="#contact" 
-                  className="inline-flex items-center space-x-2 text-[#4F6EF7] hover:text-[#5B7CFA] font-semibold group transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 text-[#4F6EF7] hover:text-[#5B7CFA] text-sm sm:text-base font-semibold group transition-colors duration-300"
                 >
                   <span>Know more about me</span>
                   <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
@@ -107,7 +107,7 @@ export default function About() {
               {/* Subtle vertical divider on desktop */}
               <div className="hidden lg:block absolute left-0 top-4 bottom-4 w-px bg-white/5" />
               
-              <div className="flex flex-col space-y-6 text-left">
+              <div className="flex flex-col space-y-4 sm:space-y-6 text-left">
                 {features.map((feature, idx) => {
                   const Icon = feature.icon;
                   return (

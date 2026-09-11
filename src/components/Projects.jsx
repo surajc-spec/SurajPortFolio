@@ -6,7 +6,7 @@ import { Github } from './Icons';
 const projects = [
   {
     title: 'NoteShare',
-    description: 'NoteShare is a MERN-based student community platform for sharing academic notes and previous-year question papers. It serves 162+ organic users with a 27-minute avg session, delivering 1,500+ RPS and 77x latency improvement (315ms→4ms) via multi-level caching. Built with React, Node.js, Express, MongoDB, and Redis, it features secure PDF viewing, Google OAuth, OTP verification, anti-scraping security, and 99.9% availability on zero-cost infrastructure.',
+    description: 'NoteShare is a MERN-based student community platform for sharing academic notes and previous-year question papers. It serves 232+ organic users with a 27-minute avg session, delivering 1,500+ RPS and 77x latency improvement (315ms→4ms) via multi-level caching. Built with React, Node.js, Express, MongoDB, and Redis, it features secure PDF viewing, Google OAuth, OTP verification, anti-scraping security, and 99.9% availability on zero-cost infrastructure.',
     image: '/noteshare1.png',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/surajc-spec/NotesApp',

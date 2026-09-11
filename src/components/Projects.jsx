@@ -24,7 +24,7 @@ const projects = [
   {
   title: "EquiSplit",
   description:
-    "Aura AI is a MERN-based multilingual image generation platform supporting 11 Indian languages with 100% language accessibility. It integrates Gemini API for translation and Cloudflare AI for high-speed generation, with ImageKit for cloud storage. Handles 100+ concurrent requests with fault-tolerant fallback, and features JWT authentication, rate limiting, and a user dashboard making AI art accessible to all.",
+    "A production-oriented expense management platform that simplifies group expense tracking, flexible expense splitting, balance calculation, and debt settlement. It uses ACID-safe PostgreSQL transactions, integer-based paise storage, JWT authentication with RBAC, Redis-based rate limiting, idempotency, audit logging, and a greedy priority-queue algorithm to reliably minimize settlement transactions.",
   image: "/EquiSplit.png",
   tech: ["React", "Node.js", "Express", "MongoDB"],
   github: "https://github.com/surajc-spec/ExpenseSplitter",
